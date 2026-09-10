@@ -46,26 +46,31 @@ PS C:\Users\User\5m-data-entry-test-v2> git commit -m "Add Q4 answers"
  8 files changed, 105 insertions(+), 41 deletions(-)
 PS C:\Users\User\5m-data-entry-test-v2>
 
-# Step 5 — Push `my-solutions` to the remote: git push -u origin my-solutions
+# Step 5 — Push `my-solutions` to the remote: 
 
-PS C:\Users\User\5m-data-entry-test-v2> git push -u origin my-solutions
-Enumerating objects: 21, done.
-Counting objects: 100% (21/21), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (11/11), 3.29 KiB | 1.65 MiB/s, done.
-Total 11 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
-remote:
-remote: Create a pull request for 'my-solutions' on GitHub by visiting:
-remote:      https://github.com/pengkwai/5m-data-entry-test-v2/pull/new/my-solutions
-remote:
-To https://github.com/pengkwai/5m-data-entry-test-v2.git
- * [new branch]      my-solutions -> my-solutions
-branch 'my-solutions' set up to track 'origin/my-solutions'.
-PS C:\Users\User\5m-data-entry-test-v2>
-
-
+PS C:\Users\User\5m-data-entry-test-v2> git checkout main
+M       src/q9.py
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\User\5m-data-entry-test-v2> git merge my-solutions
+Updating ffa6acc..0761734
+Fast-forward
+ src/q1.md | 30 +++++++++++++++---------------
+ src/q2.md | 29 +++++++++++++++++++++++++++--
+ src/q3.md | 16 +++++++++++++---
+ src/q4.md | 17 ++++++++++-------
+ src/q5.md |  9 ++++++---
+ src/q6.md | 28 ++++++++++++++++++++++------
+ src/q7.py | 11 ++++++++---
+ src/q8.py |  6 ++++--
+ 8 files changed, 105 insertions(+), 41 deletions(-)
+PS C:\Users\User\5m-data-entry-test-v2> git commit -m "Add Q4 answers"
+[main 0593c99] Add Q4 answers
+ 1 file changed, 50 insertions(+), 4 deletions(-)
+PS C:\Users\User\5m-data-entry-test-v2> git commit -a
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
 
 """
 Step 6 (short answer). You run `git status` and it says
@@ -73,9 +78,9 @@ Step 6 (short answer). You run `git status` and it says
 and which command moves a file from there into the next commit?
 
     Answer:
-It tell me that no file in the repository has been really been commit.
+It tell me that no file in the repository has been staged for commit.
 
-To really commit all modified files, use the command git commit -a
+To really commit a modified file, use the command git add file
 
 
 
