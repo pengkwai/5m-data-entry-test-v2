@@ -20,14 +20,14 @@ Task
 
 (a) What does the buggy version actually return for [1, 2, 3, 4, 5, 6, 8], and why?
 
-    Answer:
+    Answer: 3
 
 (b) Fix the bug. Write the corrected function below.
     (A one-character change is enough, but you must understand why.)
 """
 
 def count_evens(numbers):
-    # your corrected code here
+    if n % 2 == 0:
     pass
 
 
@@ -35,4 +35,6 @@ def count_evens(numbers):
 (c) In one sentence, explain in plain English what `n % 2 == 0` checks.
 
     Answer:
+It calculate the remainder when n is divided by 2. For even number, the remainder is 0 and the if statement will return true and the number n will be added to the variable count which add up the total count of even number
+
 """
